@@ -1,0 +1,92 @@
+// Bubble sort
+
+//bubble sort
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int n = sc.nextInt();
+	    int[] arr = new int[n];
+	    System.out.println("enter elements of array: ");
+	    for(int i=0;i<n;i++){
+	        arr[i] = sc.nextInt();
+	    }
+	    System.out.println("The initial order of elements are: ");
+	    for(int i=0;i<n;i++){
+	        System.out.print(arr[i]+" ");
+	    }
+	    System.out.println();
+	    System.out.println("Applying the sorting ");
+	    for(int i=0;i<=n-1;i++){
+	        for(int j=0;j<n-i-1;j++){
+	            System.out.println("before checking the condition");
+	            for(int k=0;k<n;k++){
+        	        System.out.print(arr[k]+" ");
+        	    }
+        	   if(arr[j]>arr[j+1]){
+	                int temp = arr[j];
+	                arr[j] = arr[j+1];
+	                arr[j+1] = temp;
+	            }
+	            System.out.println("after checking the condition");
+	            for(int m=0;m<n;m++){
+        	        System.out.print(arr[m]+" ");
+        	    }
+	        }
+	    }
+		System.out.println("completed the sorting algorithm");
+	    for(int l=0;l<n;l++){
+        	 System.out.print(arr[l]+" ");
+        }
+	}
+}
+
+
+//Selection sort
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int n = sc.nextInt();
+	    int[] arr = new int[n];
+	    for(int i=0;i<n;i++){
+	        arr[i] = sc.nextInt();
+	    }
+	    System.out.println("Prints the initial order of elements");
+	    for(int i=0;i<n;i++){
+	        System.out.print(arr[i]+" ");
+	    }
+	    //sorting
+	    for(int i=0;i<n-1;i++){
+	        int min = i;
+	        System.out.println("min"+arr[min]);
+	        for(int j=i;j<=n-1;j++){
+	            if(arr[j]<arr[min]){
+	                min = j;
+	                System.out.println("min in for:"+arr[min]);
+	            }
+	            System.out.println("After the if block");
+	            for(int k=0;k<n;k++){
+        	        System.out.print(arr[k]+" ");
+        	    }
+        	    System.out.println();
+	            int temp = arr[min];
+	            arr[min] = arr[i];
+	            arr[i] = temp;
+	            System.out.println("After the swap statements");
+	            for(int m=0;m<n;m++){
+        	        System.out.print(arr[m]+" ");
+        	    }
+        	    System.out.println();
+	        }
+	    }
+	    //after sorting
+	    System.out.println("Completion of sorting");
+	    for(int i=0;i<n;i++){
+	        System.out.print(arr[i]+" ");
+	    }
+	}
+}
